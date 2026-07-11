@@ -175,6 +175,7 @@ using ContextMenuProvider =
 // PanelView callback hooks
 - (void)panelViewDidBecomeFirstResponder;
 - (void)panelViewDidChangePresentationLayout;
+- (void)onHeaderPathClicked; // user clicked the path shown in the panel's header
 
 // managing entries selection
 - (void)selectEntriesWithFilenames:(const std::vector<std::string> &)_filenames;

@@ -801,6 +801,14 @@ static void ShowAlertAboutInvalidFilename(const std::string &_filename)
     [self updateAttachedBriefSystemOverview];
 }
 
+- (void)onHeaderPathClicked
+{
+    // Make sure the clicked panel becomes the active one, then open the "Go to Folder" sheet
+    // pre-populated with this panel's current path so it can be edited in place.
+    [self.state ActivatePanelByController:self];
+    nc::panel::actions::GoToFolder{}.Perform(self, self.view);
+}
+
 - (void)changeDataOptions:(const std::function<void(nc::panel::data::Model &_data)> &)_workload
 {
     assert(dispatch_is_main_queue());

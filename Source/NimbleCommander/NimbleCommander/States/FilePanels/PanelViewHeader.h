@@ -31,6 +31,9 @@
 // When the argument is nil this should be interpreted as discarding the search via (X) or Esc button.
 @property(nonatomic) std::function<void(NSString *_query)> searchRequestChangeCallback;
 
+// Called by the view when the user clicks the path shown in the header.
+@property(nonatomic) std::function<void()> pathClickedCallback;
+
 // Updates the look of the header depending on the parent panel being active or not.
 @property(nonatomic) bool active;
 

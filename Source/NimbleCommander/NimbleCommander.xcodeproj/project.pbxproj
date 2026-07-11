@@ -122,6 +122,7 @@
 		CF0A484D2BDDA2A300833160 /* ShowTabs.mm in Sources */ = {isa = PBXBuildFile; fileRef = CF197C451FB834B7009F6C59 /* ShowTabs.mm */; };
 		CF0A484E2BDDA2A700833160 /* ShowTerminal.mm in Sources */ = {isa = PBXBuildFile; fileRef = CF20DF341FC66E5F0074ABB8 /* ShowTerminal.mm */; };
 		CF0A484F2BDDA2AC00833160 /* ShowVolumeInformation.mm in Sources */ = {isa = PBXBuildFile; fileRef = CFD8CDBD1E8CD6A700E4DC53 /* ShowVolumeInformation.mm */; };
+		FADE010000000000000000A3 /* ShowFileInfo.mm in Sources */ = {isa = PBXBuildFile; fileRef = FADE010000000000000000A2 /* ShowFileInfo.mm */; };
 		CF0A48502BDDA2B100833160 /* SpotlightSearch.mm in Sources */ = {isa = PBXBuildFile; fileRef = CFD8CDD51E8DEDB200E4DC53 /* SpotlightSearch.mm */; };
 		CF0A48512BDDA2B500833160 /* SyncPanels.mm in Sources */ = {isa = PBXBuildFile; fileRef = CF20DF4A1FC693440074ABB8 /* SyncPanels.mm */; };
 		CF0A48522BDDA2B900833160 /* TabsManagement.mm in Sources */ = {isa = PBXBuildFile; fileRef = CF27408D1E594C46000D4365 /* TabsManagement.mm */; };
@@ -1270,6 +1271,8 @@
 		CFD8CDB71E8CD37D00E4DC53 /* EjectVolume.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = EjectVolume.mm; path = NimbleCommander/States/FilePanels/Actions/EjectVolume.mm; sourceTree = SOURCE_ROOT; };
 		CFD8CDBC1E8CD6A700E4DC53 /* ShowVolumeInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowVolumeInformation.h; path = NimbleCommander/States/FilePanels/Actions/ShowVolumeInformation.h; sourceTree = SOURCE_ROOT; };
 		CFD8CDBD1E8CD6A700E4DC53 /* ShowVolumeInformation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ShowVolumeInformation.mm; path = NimbleCommander/States/FilePanels/Actions/ShowVolumeInformation.mm; sourceTree = SOURCE_ROOT; };
+		FADE010000000000000000A1 /* ShowFileInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowFileInfo.h; path = NimbleCommander/States/FilePanels/Actions/ShowFileInfo.h; sourceTree = SOURCE_ROOT; };
+		FADE010000000000000000A2 /* ShowFileInfo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ShowFileInfo.mm; path = NimbleCommander/States/FilePanels/Actions/ShowFileInfo.mm; sourceTree = SOURCE_ROOT; };
 		CFD8CDC21E8CDBFA00E4DC53 /* InsertFromPasteboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InsertFromPasteboard.h; path = NimbleCommander/States/FilePanels/Actions/InsertFromPasteboard.h; sourceTree = SOURCE_ROOT; };
 		CFD8CDC31E8CDBFA00E4DC53 /* InsertFromPasteboard.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = InsertFromPasteboard.mm; path = NimbleCommander/States/FilePanels/Actions/InsertFromPasteboard.mm; sourceTree = SOURCE_ROOT; };
 		CFD8CDC81E8CE65600E4DC53 /* OpenXAttr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenXAttr.h; path = NimbleCommander/States/FilePanels/Actions/OpenXAttr.h; sourceTree = SOURCE_ROOT; };
@@ -1808,6 +1811,8 @@
 				CF20DF341FC66E5F0074ABB8 /* ShowTerminal.mm */,
 				CFD8CDBC1E8CD6A700E4DC53 /* ShowVolumeInformation.h */,
 				CFD8CDBD1E8CD6A700E4DC53 /* ShowVolumeInformation.mm */,
+				FADE010000000000000000A1 /* ShowFileInfo.h */,
+				FADE010000000000000000A2 /* ShowFileInfo.mm */,
 				CFD8CDD41E8DEDB200E4DC53 /* SpotlightSearch.h */,
 				CFD8CDD51E8DEDB200E4DC53 /* SpotlightSearch.mm */,
 				CF20DF491FC693440074ABB8 /* SyncPanels.h */,
@@ -3120,6 +3125,7 @@
 				CF0A473D2BDD8CB000833160 /* ThemeAdaptor.mm in Sources */,
 				CF0A47F92BDD9E8500833160 /* AppDelegateCPP.mm in Sources */,
 				CF0A484F2BDDA2AC00833160 /* ShowVolumeInformation.mm in Sources */,
+				FADE010000000000000000A3 /* ShowFileInfo.mm in Sources */,
 				CF0A48432BDDA26E00833160 /* OpenNetworkConnection.mm in Sources */,
 				CF0A48422BDDA1DB00833160 /* OpenFile.mm in Sources */,
 				CF0A47282BDD8A1100833160 /* PreferencesWindowExternalEditorsTabNewEditorSheet.mm in Sources */,

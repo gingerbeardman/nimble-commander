@@ -551,6 +551,10 @@ static void Perform(SEL _sel, const PanelActionsMap &_map, PanelController *_tar
 {
     PERFORM;
 }
+- (IBAction)OnGetInfo:(id)sender
+{
+    PERFORM;
+}
 - (IBAction)onMainMenuPerformFindAction:(id)sender
 {
     PERFORM;

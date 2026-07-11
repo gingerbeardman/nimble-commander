@@ -766,6 +766,11 @@ DQ
                                     <action selector="OnBriefSystemOverviewCommand:" target="-1" id="zCw-xj-KAA"/>
                                 </connections>
                             </menuItem>
+                            <menuItem title="Get Info" tag="15025" keyEquivalent="i" id="GtI-nf-o01">
+                                <connections>
+                                    <action selector="OnGetInfo:" target="-1" id="GtI-nf-a01"/>
+                                </connections>
+                            </menuItem>
                             <menuItem title="Detailed Volume Information" tag="15010" id="826">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>

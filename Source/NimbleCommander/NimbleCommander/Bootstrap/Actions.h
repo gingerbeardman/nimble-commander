@@ -130,6 +130,7 @@ static constexpr std::pair<const char*,int> g_ActionsTags[] = {
     {"menu.command.system_overview",                    15'000},
     {"menu.command.volume_information",                 15'010},
     {"menu.command.file_attributes",                    15'020},
+    {"menu.command.get_info",                           15'025},
     {"menu.command.open_xattr",                         15'230},
     {"menu.command.copy_file_name",                     15'030},
     {"menu.command.copy_file_path",                     15'040},
@@ -339,6 +340,7 @@ static constinit std::pair<const char*, const char*> g_DefaultActionShortcuts[] 
     {"menu.command.system_overview",                        "⌘l"      }, // cmd+l
     {"menu.command.volume_information",                     ""        },
     {"menu.command.file_attributes",                        "^a"      }, // ctrl+a
+    {"menu.command.get_info",                               "⌘i"      }, // cmd+i
     {"menu.command.copy_file_name",                         "⇧⌘c"     }, // shift+cmd+c
     {"menu.command.copy_file_path",                         "⌥⌘c"     }, // alt+cmd+c
     {"menu.command.copy_file_directory",                    "⇧⌥⌘c"    }, // shift+alt+cmd+c

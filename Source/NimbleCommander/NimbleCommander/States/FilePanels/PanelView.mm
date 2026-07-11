@@ -102,6 +102,10 @@ struct StateStorage {
             if( PanelView *const strong_self = weak_self )
                 [strong_self.controller changeSortingModeTo:_sm];
         };
+        m_HeaderView.pathClickedCallback = [weak_self] {
+            if( PanelView *const strong_self = weak_self )
+                [strong_self.controller onHeaderPathClicked];
+        };
         [self addSubview:m_HeaderView];
 
         m_FooterView = _footer;

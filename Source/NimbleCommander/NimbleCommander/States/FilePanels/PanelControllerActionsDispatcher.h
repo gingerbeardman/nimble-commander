@@ -113,6 +113,7 @@ using PanelActionsMap = ankerl::unordered_dense::map<SEL, std::unique_ptr<const 
 - (IBAction)OnOpenWithExternalEditor:(id)sender;
 - (IBAction)OnFileAttributes:(id)sender;
 - (IBAction)OnDetailedVolumeInformation:(id)sender;
+- (IBAction)OnGetInfo:(id)sender;
 - (IBAction)onMainMenuPerformFindAction:(id)sender;
 - (IBAction)OnGoToQuickListsParents:(id)sender;
 - (IBAction)OnGoToQuickListsHistory:(id)sender;

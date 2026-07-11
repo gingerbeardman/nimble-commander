@@ -16,6 +16,7 @@
 #include <NimbleCommander/GeneralUI/AskForPasswordWindowController.h>
 #include "Helpers.h"
 #include <Utility/ObjCpp.h>
+#include <Utility/StringExtras.h>
 #include <Utility/SystemInformation.h>
 
 namespace nc::panel::actions {
@@ -26,6 +27,12 @@ void GoToFolder::Perform(PanelController *_target, id /*_sender*/) const
 {
     GoToFolderSheetController *const sheet = [GoToFolderSheetController new];
     sheet.panel = _target;
+    // Pre-populate the sheet with the current directory of the panel so it can be edited in place.
+    if( _target.isUniform ) {
+        const std::string cur = _target.data.DirectoryPathWithTrailingSlash();
+        if( !cur.empty() )
+            sheet.initialPath = [NSString stringWithUTF8StdString:cur];
+    }
     [sheet showSheetWithParentWindow:_target.window
                              handler:[=] {
                                  auto c = std::make_shared<DirectoryChangeRequest>();

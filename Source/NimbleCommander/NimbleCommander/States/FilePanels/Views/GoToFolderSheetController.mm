@@ -52,6 +52,7 @@ static std::vector<unsigned> ListDirsWithPrefix(const VFSListing &_listing, cons
     std::string m_RequestedPath;
 }
 @synthesize requestedPath = m_RequestedPath;
+@synthesize initialPath;
 @synthesize panel;
 @synthesize Text;
 @synthesize Error;
@@ -69,7 +70,10 @@ static std::vector<unsigned> ListDirsWithPrefix(const VFSListing &_listing, cons
 {
     [super windowDidLoad];
 
-    if( StateConfig().Has(g_StateGoToKey) ) {
+    if( self.initialPath.length > 0 ) {
+        self.Text.stringValue = self.initialPath;
+    }
+    else if( StateConfig().Has(g_StateGoToKey) ) {
         auto path = StateConfig().GetString(g_StateGoToKey);
         self.Text.stringValue = [NSString stringWithUTF8StdString:path];
     }

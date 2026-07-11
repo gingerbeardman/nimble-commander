@@ -30,12 +30,14 @@ static bool IsDark(NSColor *_color);
     data::SortMode m_SortMode;
     std::function<void(data::SortMode)> m_SortModeChangeCallback;
     std::function<void(NSString *)> m_SearchRequestChangeCallback;
+    std::function<void()> m_PathClickedCallback;
     std::unique_ptr<nc::panel::HeaderTheme> m_Theme;
     bool m_Active;
 }
 
 @synthesize sortMode = m_SortMode;
 @synthesize sortModeChangeCallback = m_SortModeChangeCallback;
+@synthesize pathClickedCallback = m_PathClickedCallback;
 @synthesize defaultResponder;
 @synthesize sortMenuPopup;
 
@@ -59,6 +61,9 @@ static bool IsDark(NSColor *_color);
         m_PathTextField.lineBreakMode = NSLineBreakByTruncatingHead;
         m_PathTextField.maximumNumberOfLines = 1;
         m_PathTextField.alignment = NSTextAlignmentCenter;
+        NSClickGestureRecognizer *const path_click =
+            [[NSClickGestureRecognizer alloc] initWithTarget:self action:@selector(onPathClicked:)];
+        [m_PathTextField addGestureRecognizer:path_click];
         [self addSubview:m_PathTextField];
 
         m_SearchTextField = [[NSTextField alloc] initWithFrame:NSRect()];
@@ -343,6 +348,12 @@ static bool IsDark(NSColor *_color);
 
 - (void)onSearchFieldAction:(id) [[maybe_unused]] _sender
 {
+}
+
+- (void)onPathClicked:(id) [[maybe_unused]] _sender
+{
+    if( m_PathClickedCallback )
+        m_PathClickedCallback();
 }
 
 - (void)onSortButtonAction:(id) [[maybe_unused]] _sender

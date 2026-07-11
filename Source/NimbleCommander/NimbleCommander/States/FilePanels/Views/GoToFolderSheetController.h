@@ -14,6 +14,10 @@
 @property(nonatomic) PanelController *panel;
 @property(nonatomic, readonly) const std::string &requestedPath;
 
+// If set before the sheet is shown, the text field is pre-populated with this path instead of the
+// last path used previously.
+@property(nonatomic) NSString *initialPath;
+
 - (void)showSheetWithParentWindow:(NSWindow *)_window handler:(std::function<void()>)_handler;
 - (void)tellLoadingResult:(const std::expected<void, nc::Error> &)_result;
 

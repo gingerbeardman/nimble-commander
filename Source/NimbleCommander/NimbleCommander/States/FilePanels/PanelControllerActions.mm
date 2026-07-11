@@ -6,6 +6,7 @@
 #include "Actions/GoToFolder.h"
 #include "Actions/EjectVolume.h"
 #include "Actions/ShowVolumeInformation.h"
+#include "Actions/ShowFileInfo.h"
 #include "Actions/InsertFromPasteboard.h"
 #include "Actions/OpenXAttr.h"
 #include "Actions/SpotlightSearch.h"
@@ -133,6 +134,7 @@ PanelActionsMap BuildPanelActionsMap(nc::config::Config &_global_config,
     add(@selector(OnDeselectByMask:), new SelectAllByMask{false});
     add(@selector(OnQuickDeselectByExtension:), new SelectAllByExtension{false});
     add(@selector(OnDetailedVolumeInformation:), new ShowVolumeInformation{_native_fs_mgr});
+    add(@selector(OnGetInfo:), new ShowFileInfo);
     add(@selector(OnFileAttributes:), new ChangeAttributes{_global_config});
     add(@selector(OnOpenWithExternalEditor:), new OpenWithExternalEditor{_file_opener});
     add(@selector(OnEjectVolume:), new EjectVolume{_native_fs_mgr});
